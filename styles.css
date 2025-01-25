@@ -1,0 +1,447 @@
+/* Global body style */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.logo img {
+    height: 80px;
+    position: relative;
+    left: 35px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 10px;
+    padding: 30px;
+    display: flex;
+}
+
+nav li {
+    margin-left: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 300;
+    animation: fadeInUp 1s ease-in-out; /* Added animation */
+}
+
+nav a:hover {
+    color: #666;
+}
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    font-weight: 200;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-in-out; /* Added animation */
+}
+
+.intro p {
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 300;
+    color: #666;
+    animation: fadeInUp 1.5s ease-in-out; /* Added animation */
+}
+
+.portfolio-overview {
+    margin-top: 40px;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    animation: slideIn 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px; /* Added round edges */
+}
+
+.overlay {
+    position: absolute;
+    top: 12%; /* Moved title down to be 10% from the bottom */
+    right: 5%;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 1.8em; /* Increased font size */
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em; /* Added letter spacing */
+    background: none; /* Removed background */
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2em;
+    font-weight: 300;
+    color: #333;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    color: #666;
+}
+
+footer {
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    margin: -5px;
+    padding: 20px;
+    display: flex;
+    justify-content: left;
+}
+
+footer li {
+    margin-left: 25px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 300;
+    animation: fadeInUp 1s ease-in-out; /* Added animation */
+}
+
+footer a:hover {
+    color: #666;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* CSS for Biography Page */
+.bio {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bio-image {
+    display: block;
+    max-width: 75%;
+    height: auto;
+    border-radius: 30px;
+    margin: 20px 0 20px auto; /* Align to the right */
+    float: right;
+    animation: fadeInUp 1.5s ease-in-out; /* Added animation */
+}
+
+.bio-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: justify;
+    animation: fadeInUp 2s ease-in-out; /* Added animation */
+}
+
+.grad-date {
+    float: right;
+    font-weight: 150;
+    color: #666;
+    animation: fadeInUp 2.5s ease-in-out; /* Added animation */
+}
+hr {
+    border: 0;
+    height: 1px;
+    background: #e5e5e5;
+    margin: 40px 0;
+    animation: fadeIn 2s ease-in-out; /* Added animation */
+}
+
+.work-experience {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    position: relative;
+    animation: fadeInUp 2.5s ease-in-out; /* Added animation */
+}
+
+.experience-logo {
+    align-self: flex-start;
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 15px;
+    position: relative;
+    top: 20px;
+    left: 0px;
+    animation: fadeIn 2.5s ease-in-out; /* Added animation */
+}
+
+.work-duration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 0.8em;
+    color: #666;
+    margin-left: 100px;
+    margin-bottom: -5px;
+    animation: fadeInUp 2.5s ease-in-out; /* Added animation */
+}
+
+/* CSS for Contact Page */
+.contact-container {
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    gap: 40px;
+}
+
+.left-section {
+    flex: 10 0 50%; /* 60% width */
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.right-section {
+    flex: 0 0 40%; /* 40% width */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align content to the right */
+    text-align: right; /* Align text to the right */
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+.tight-spacing {
+    line-height: 1.2; /* Adjust line height here */
+}
+
+.contact-item {
+    margin-bottom: 21px;
+}
+
+.last-item {
+    margin-bottom: 21px; /* Additional margin for the last item */
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 300;
+}
+
+.contact-item a:hover {
+    color: #666;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    font-size: 1em;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.contact-form button {
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #d8ccdb;
+    color: white;
+    cursor: pointer;
+    width: 150px;
+    border-radius: 15px;
+}
+
+.contact-form button:hover {
+    background-color: #d1b4d9;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background-color: #d8ccdb;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 50px; /* Ensures the background circle is centered */
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle; /* Ensures the icon is vertically centered */
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.social-icons a:hover {
+    background-color: #d1b4d9;
+}
+
+/* CSS for Portfolio Page */
+.content {
+    text-align: center;
+    margin: 20px 0;
+}
+.project {
+    margin: 20px auto;
+    width: 80%;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInSlideUp 1s ease-out forwards;
+}
+.project img {
+    width: 100%;
+    height: auto;
+}
+.project-number {
+    font-size: 40px;
+    color: #8a8a8a;
+    font-weight: bold;
+    position: absolute;
+}
+.project1 {
+    margin-top: 50px;
+    margin-left: 0px;
+    animation-delay: 0s;
+}
+.project2 {
+    margin-top: 50px;
+    margin-right: 0px;
+    animation-delay: 0.3s;
+}
+.project3 {
+    margin-top: 50px;
+    margin-left: 0px;
+    animation-delay: 0.6s;
+}
+.project4 {
+    margin-top: 50px;
+    margin-right: 0px;
+    animation-delay: 0.9s;
+}
+.number1 {
+    top: 0px;
+    right: -75px;
+}
+.number2 {
+    top: 0px;
+    left: -75px;
+}
+.number3 {
+    top: 0px;
+    right: -75px;
+}
+.number4 {
+    top: 0px;
+    left: -75px;
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4 - Revisiting The Biome-Bones</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 300; /* Thinner font */
+            word-spacing: 0.1em; /* Increased space between words */
+            letter-spacing: 0.02em; /* Increased space between characters */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        h1, h2, strong {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 400;
+            word-spacing: 0.1em;
+            letter-spacing: 0.07em;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px; /* Limit maximum width */
+            margin: 20px auto;
+        }
+        .main-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            border-radius: 30px;
+        }
+        .project-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .project-info h1 {
+            font-size: 24px;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        .project-info p {
+            font-size: 12px;
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+        .project-brief-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 90%;
+            max-width: 1000px; /* Limit maximum width */
+            margin: 20px auto;
+        }
+        .project-brief-title {
+            align-self: flex-start;
+            margin-top: 20px;
+            word-spacing: 0.2em; /* Increased space between words */
+            letter-spacing: 0.15em; /* Increased space between characters */
+        }
+        .project-brief {
+            width: 100%;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .project-brief p {
+            margin-bottom: 10px;
+        }
+        .additional-images {
+            position: relative;
+            width: 90%;
+            max-width: 1200px; /* Limit maximum width */
+            margin: 40px auto;
+            height: 3300px; /* Adjust height to fit all images */
+        }
+        .additional-images div {
+            position: absolute;
+            width: 85%;
+            transition: opacity 0.5s ease; /* Transition for opacity */
+        }
+        .additional-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+        .number1, .number2, .number3, .number4, .number5, .number6, .number7 {
+            font-size: 60px;
+            color: #8a8a8a;
+            font-weight: bold;
+            position: absolute;
+        }
+        .number1 {
+            top: 30px;
+            right: -105px;
+        }
+        .number2 {
+            top: 100px;
+            left: -105px;
+        }
+        .number3 {
+            top: 100px;
+            right: -105px;
+        }
+        .number4 {
+            top: 100px;
+            left: -105px;
+        }
+        .number5 {
+            top: 100px;
+            right: -105px;
+        }
+        .number6 {
+            top: 100px;
+            left: -105px;
+        }
+        .number7 {
+            top: 100px;
+            right: -105px;
+        }
+        .img1 {
+            top: 0;
+            left: 0;
+        }
+        .img2 {
+            top: 460px;
+            right: 0;
+        }
+        .img3 {
+            top: 920px;
+            left: 0;
+        }
+        .img4 {
+            top: 1380px;
+            right: 0;
+        }
+        .img5 {
+            top: 1840px;
+            left: 0;
+        }
+        .img6 {
+            top: 2300px;
+            right: 0;
+        }
+        .img7 {
+            top: 2760px;
+            left: 0;
+        }
+        .additional-images .faded {
+            opacity: 0.4; /* Reduced opacity for faded images */
+        }
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f9f9f9;
+            position: relative;
+        }
+        .copyright {
+            position: absolute;
+            bottom: 27px;
+            right: 30px;
+            font-size: 12px;
+            color: #8a8a8a;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Portfolio Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biography.html">Biography</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="project-info">
+                <h1>Revisiting The Biome-Bones</h1>
+                <p><strong>Location:</strong> Toronto, Canada<br>
+                   <strong>Date:</strong> 2023<br>
+                   <strong>Type:</strong> Individual Project<br>
+                   <strong>Supervised by:</strong> Faye Song
+               </p>
+            </div>
+            <div class="main-image">
+                <img src="images/project4.png" alt="Main Project Image">
+            </div>
+        </div>
+        <div class="project-brief-container">
+            <h2 class="project-brief-title">PROJECT BRIEF</h2>
+            <div class="project-brief">
+                <p>The specialized roles of dogs reflect the environments from which they originate. Retrievers, bred in wetlands and coastal regions, excel in waterfowl retrieval due to their aquatic prowess. Herding dogs, from grasslands and highlands, possess the agility to manage livestock. Hunting breeds, developed in forested regions, are skilled in tracking and flushing out game. Sled dogs, hailing from arctic tundra regions, are robust and insulated for endurance in severe cold. Each breed’s evolution within these niches highlights the symbiosis between human needs and canine capabilities.</p>
+                <p>In the pursuit of designing a canine daycare facility that prioritizes the behavioral preferences and needs of dogs, the project draws inspiration from their diverse evolutionary origins across various biomes. This design concept leverages extensive research on the natural behaviors exhibited by dogs in accordance with their geographical biomes of origin. By utilizing this valuable behavioral data as a guiding framework, the daycare facility endeavors to provide an environment that harmonizes with the intrinsic inclinations of dogs, thereby fostering a profound sense of joy and contentment. The overarching goal is to create a space where dogs can authentically engage in their natural behaviors, ensuring a fulfilling and pleasurable experience during their time away from their busy-working parents.</p>
+            </div>
+        </div>
+        <section class="additional-images">
+            <div class="img1">
+                <img src="images/project4-2.png" alt="Project Image 2">
+                <span class="number1">01</span>
+            </div>
+            <div class="img2">
+                <span class="number2">02</span>
+                <img src="images/project4-3.png" alt="Project Image 3">
+            </div>
+            <div class="img3">
+                <img src="images/project4-4.png" alt="Project Image 4">
+                <span class="number3">03</span>
+            </div>
+            <div class="img4">
+                <span class="number4">04</span>
+                <img src="images/project4-5.png" alt="Project Image 5">
+            </div>
+            <div class="img5">
+                <img src="images/project4-6.png" alt="Project Image 6">
+                <span class="number5">05</span>
+            </div>
+            <div class="img6">
+                <span class="number6">06</span>
+                <img src="images/project4-7.png" alt="Project Image 7">
+            </div>
+            <div class="img7">
+                <img src="images/project4-8.png" alt="Project Image 8">
+                <span class="number7">07</span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="https://www.instagram.com/emmluvu2?igshid=MTc1b29tdjN6cmR3dg==" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/emily-zhang-9607201b3/" target="_blank">LinkedIn</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+        <p class="copyright">
+            Copyright &copy; 2024, Emily Zhang
+        </p>
+    </footer>
+    <script>
+        document.addEventListener('scroll', function() {
+            const images = document.querySelectorAll('.additional-images div');
+            const screenCenter = window.innerHeight / 2;
+            
+            images.forEach(img => {
+                const rect = img.getBoundingClientRect();
+                const imgCenter = rect.top + (rect.height / 2);
+                
+                if (Math.abs(imgCenter - screenCenter) < rect.height / 2) {
+                    img.style.opacity = 1;
+                } else {
+                    img.style.opacity = 0.4;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

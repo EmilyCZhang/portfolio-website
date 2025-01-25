@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emily Zhang - Interior Architect - Biography</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 300; /* Thinner font */
+            word-spacing: 0.1em; /* Increased space between words */
+            letter-spacing: 0.02em; /* Increased space between characters */
+        }
+        h1, h2, strong {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 400;
+            word-spacing: 0.1em;
+            letter-spacing: 0.07em;
+        }
+        .decorative-separator {
+            text-align: center;
+            color: #d8ccdb;
+            font-size: 0.8em;
+            margin: 40px 0;
+        }
+        footer {
+            position: relative;
+        }
+        .copyright {
+            position: absolute;
+            bottom: 27px;
+            right: 15px;
+            font-size: 12px;
+            color: #8a8a8a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Portfolio Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biography.html">Biography</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="bio">
+            <h1>Genotype</h1>
+            <img src="images/self-intro.png" alt="Self Introduction Image" class="bio-image">
+            <p class="bio-text">
+                My journey into interior design began in a dilapidated elementary classroom, where poor design stifled creativity. Experiencing a well-designed space after a school renovation sparked my passion for how interiors impact well-being. Studying architecture in college, I focused on interior design, fascinated by its emotional and functional intricacies. I believe interior spaces, like narratives, evoke profound experiences through texture, color, and light. Now at RISD for advanced studies, I aim to explore innovative, sustainable design practices. My goal is to create spaces that resonate deeply with their inhabitants, enhancing their emotional and functional experience.
+            </p>
+
+            <p class="decorative-separator">═════════════════════ &nbsp;✿&nbsp; ═════════════════════</p>
+
+            <h2>Classrooms</h2>
+            <p class="bio-text">
+                Rhode Island School of Design || <em>Master of Design: Interior Architecture (Adaptive Reuse)</em> <span class="grad-date">Jun 2026</span><br>
+                Yorkville University || <em>Bachelor of Interior Design</em> <span class="grad-date">Jun 2024</span><br>
+                University of Toronto || <em>Honour Bachelor of Arts: Architecture Specialist</em> <span class="grad-date">Jun 2022</span>
+            </p>
+
+            <p class="decorative-separator">═════════════════════ &nbsp;✿&nbsp; ═════════════════════</p>
+
+            <h2>Adventures</h2>
+            <div class="work-experience">
+                <img src="images/experience1.png" alt="DSC Studio Logo" class="experience-logo">
+                <div>
+                    <p class="bio-text">
+                        <strong>Art and Design Editor @ DSC Studio</strong><br>
+                        At DSC Studio, I crafted and revised compelling articles on art events, design news, and exhibitions, deeply engaging with the contemporary art and design industry. Conducting thorough research from reliable sources, I ensured content accuracy and relevance. My technical proficiency in Rhino, AutoCAD, and Adobe Suite, paired with a creative approach, allowed me to explore diverse perspectives and interconnect various aspects of the art world.
+                    </p>
+                    <p class="work-duration">2022 - 2023</p>
+                </div>
+            </div>
+            
+            <div class="work-experience">
+                <img src="images/experience2.png" alt="EXP Logo" class="experience-logo">
+                <div>
+                    <p class="bio-text">
+                        <strong>Design Assistant Intern @ EXP</strong><br>
+                        As a Design Assistant Intern at EXP, I collaborated with designers and engineers to streamline drawings and enhance project efficiency. I contributed to refining floor plans through detailed drawing and editing, improving design precision. Additionally, I led the creation of presentation materials, producing cohesive visuals that effectively communicated design concepts and plans, showcasing the team's vision and expertise.
+                    </p>
+                    <p class="work-duration">2017</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="https://www.instagram.com/emmluvu2?igshid=MTc1b29tdjN6cmR3dg==" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/emily-zhang-9607201b3/" target="_blank">LinkedIn</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+        <div class="copyright">
+            Copyright &copy; 2024, Emily Zhang
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.bio-image, .bio-text, .grad-date, .work-experience, .experience-logo, .work-duration');
+            
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const handleIntersect = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(handleIntersect, options);
+
+            elementsToAnimate.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
